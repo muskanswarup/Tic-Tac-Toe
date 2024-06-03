@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: teal;
+    color: white;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; 
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    width: 100%; 
+    max-width: 500px; 
+    padding: 20px; 
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cells {
+    width: 100%;
+    height: 120px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cells:hover {
+    background-color: rgba(255, 255, 255, 0.2); /
+}
+
+#statusText {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px; 
+}
+
+button, .buttons {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons:hover {
+    background-color: #e67e22;
+}
+
+@media (max-width: 600px) {
+    .cells {
+        height: 80px;
+        font-size: 25px;
+    }
+
+    .buttons {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    #statusText {
+        font-size: 24px; 
+    }
+
+    .gameContainer {
+        gap: 10px; 
+    }
+}
+
+/* Added media query for very small devices */
+@media (max-width: 400px) {
+    .cells {
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .buttons {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    #statusText {
+        font-size: 20px;
+    }
+}
